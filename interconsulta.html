@@ -4,43 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-
     <title>Interconsulta</title>
 </head>
 <body>
+      <!-- Boton de inicio -->
     <div class="container">
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item active" aria-current="page">Home</li>
-            </ol>
-          </nav>
-          
+        <nav class="navbar navbar-light bg-light justify-content-end">
+            <a class="navbar-brand" href="#">Inicio</a>
+        </nav>
+    </div> 
+    <br>
+    <div class="container">
+        <table id="myTable0" class="table bg-primary text-white">  
+            <thead>
+            <th class="text-center" style="font-size:40px">
+                Interconsulta
+            </th>
+            </thead>
+        </table> 
     </div>
     <div class="container">
         <form>
             <div class="form-group">
-                <label for="rutPac">Rut</label>
+                <label for="rutPac">Rut:</label>
                 <input type="text" class="form-control" id="rutPac" placeholder="11.111.111-1">
-              </div>
+            </div>
             <div class="form-group">
-              <label for="nombrePac">Nombre</label>
+              <label for="nombrePac">Nombre:</label>
               <input type="text" class="form-control" id="nombrePac" placeholder="Nombre Paciente">
             </div>
-            <div >
+            <div>
                 <div class="row">
-              
             <div class="form-group col-6">
-                <label for="appPac">Apellido Paterno</label>
+                <label for="appPac">Apellido Paterno:</label>
                 <input type="text" class="form-control" id="appPac" placeholder="Apellido Paterno">
             </div>
             <div class="form-group col-6">
-                <label for="apmPac">Apellido Materno</label>
+                <label for="apmPac">Apellido Materno:</label>
                 <input type="text" class="form-control" id="apmPac" placeholder="Apellido Materno">
             </div>
         </div>
     </div>
             <div class="form-group">
-              <label for="serviciosSelect">Servicio a derivar</label>
+              <label for="serviciosSelect">Servicio a derivar:</label>
               <select class="form-control" id="servicios">
                 <option>Servicio Oftalmología</option>
                 <option>Servicio Otorrino</option>
@@ -49,12 +55,21 @@
                 <option>Servicio de Cirugía</option>
               </select>
             </div>
-            
+            <!-- Datos de los médicos -->
+            <br>
+            <div class="shadow-sm p-3 mb-5 bg-primary rounded text-center text-white">Datos del Médico</div>
+            <div class="form-group">
+                <label for="rutMed">Rut del médico:</label>
+                <input type="text" class="form-control" id="rutMed" placeholder="11.111.111-1">
+            </div>
+            <div class="form-group">
+              <label for="nombreMed">Nombre:</label>
+              <input type="text" class="form-control" id="nombreMed" placeholder="Nombre del Médico">
+            </div>
             <div class="form-group">
               <label for="observaciones">Observaciones</label>
               <textarea class="form-control" id="observaciones" rows="3"></textarea>
             </div>
-            <button type="button" class="btn btn-primary" data-toggle="myModal" data-target="#myModal" >Guardar</button>
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Guardar</button>
           </form>
     </div>
@@ -63,7 +78,7 @@
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Guardado</h5>
+              <h5 class="modal-title" id="guardadoModalLabel">Guardado</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
